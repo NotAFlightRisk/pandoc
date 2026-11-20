@@ -2292,10 +2292,11 @@ Fields:
 `extensions`
 :   Markdown extensions that can be used (sequence of strings)
 
-`highlight_style`
-:   Style to use for highlighting; see the output of `pandoc
-    --print-highlight-style=...` for an example structure. The
-    value `nil` means that no highlighting is used. (table|nil)
+`highlight_method`
+:   Method to use for code highlighting; one of 'none', 'default',
+    'idiomatic', or a highlighting style table (see the output of
+    `pandoc --print-highlight-style=...` for an example
+    structure). (string|table)
 
 `html_math_method`
 :   How to print math in HTML; one of 'plain', 'mathjax',
@@ -2311,9 +2312,6 @@ Fields:
 
 `incremental`
 :   True if lists should be incremental (boolean)
-
-`listings`
-:   Use listings package for code (boolean)
 
 `number_offset`
 :   Starting number for section, subsection, ... (sequence of
